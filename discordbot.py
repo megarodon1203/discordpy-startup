@@ -15,7 +15,12 @@ async def on_command_error(ctx, error):
 
 @bot.command()
 async def ping(ctx):
-    await ctx.send('pong')
+    await ctx.send('うんこ')
 
 
 bot.run(token)
+
+@client.event
+async def on_member_join(member):
+    reply = f'{message.author.mention} いらっしゃい' # 返信メッセージの作成
+        await message.channel.send(reply) # 返信メッセージを送信
